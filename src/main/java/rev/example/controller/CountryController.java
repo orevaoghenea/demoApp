@@ -19,6 +19,7 @@ public class CountryController {
 
     @PostMapping("create")
     public ResponseEntity<Country> createUser(@RequestBody Country insert) {
+        System.out.println("Continent::"+insert);
         Country country = count.insertcountry(insert);
         return new ResponseEntity<>(country, HttpStatus.CREATED);
     }
